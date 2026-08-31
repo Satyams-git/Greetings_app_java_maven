@@ -1,4 +1,4 @@
-package com.kodekloud.app;
+package com.qb.app;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

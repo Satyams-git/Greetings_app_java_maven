@@ -7,13 +7,13 @@
   <!-- ============================================================ -->
   <!-- Maven Coordinates (GAV) — unique identity of this project     -->
   <!-- ============================================================ -->
-  <groupId>com.kodekloud</groupId>
-  <artifactId>greeting-app</artifactId>
+  <groupId>com.qb</groupId>
+  <artifactId>qb-app</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>KodeKloud Greeting App</name>
-  <description>Simple Maven demo project for the DevOps Pre-Requisite course</description>
+  <name>QB App</name>
+  <description>Simple Maven demo project for the QB application</description>
 
   <!-- ============================================================ -->
   <!-- Properties                                                    -->
@@ -50,7 +50,7 @@
   <!-- Build & Plugins                                               -->
   <!-- ============================================================ -->
   <build>
-    <finalName>greeting-app-1.0.0</finalName>
+    <finalName>qb-app-1.0.0</finalName>
     <plugins>
 
       <!-- Compiles the Java source code -->
@@ -74,7 +74,7 @@
             <configuration>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>com.kodekloud.app.App</mainClass>
+                  <mainClass>com.qb.app.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>

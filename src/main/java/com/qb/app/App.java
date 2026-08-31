@@ -1,9 +1,9 @@
-package com.kodekloud.app;
+package com.qb.app;
 
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * KodeKloud DevOps Pre-Requisite Course — Maven Demo Project.
+ * QB App — Maven Demo Project.
  *
  * Yeh ek jaan-boojh kar simple rakha gaya app hai, taaki classroom mein
  * poora Maven build lifecycle (compile -> test -> package -> install)
