@@ -5,15 +5,15 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * QB App — Maven Demo Project.
  *
- * Yeh ek jaan-boojh kar simple rakha gaya app hai, taaki classroom mein
- * poora Maven build lifecycle (compile -> test -> package -> install)
- * kuch hi seconds mein live dikhaya ja sake.
+ * This intentionally simple application is designed to demonstrate the
+ * full Maven build lifecycle (compile -> test -> package -> install)
+ * in just a few seconds in the classroom.
  */
 public class App {
 
     /**
-     * Business logic ko main() se alag rakha hai, taaki ise
-     * AppTest.java mein easily unit-test kiya ja sake.
+     * Keep the business logic separate from main() so it can be easily
+     * unit-tested in AppTest.java.
      */
     public static String buildGreeting(String name) {
         if (StringUtils.isBlank(name)) {

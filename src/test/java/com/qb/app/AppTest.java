@@ -4,8 +4,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Yeh test Maven ke "test" phase mein automatically run hoga —
- * jab bhi aap `mvn test`, `mvn package`, ya `mvn install` chalayenge.
+ * This test will run automatically in Maven's "test" phase whenever you
+ * execute `mvn test`, `mvn package`, or `mvn install`.
  */
 public class AppTest {
 
