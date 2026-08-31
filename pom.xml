@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- ============================================================ -->
+  <!-- Maven Coordinates (GAV) — unique identity of this project     -->
+  <!-- ============================================================ -->
+  <groupId>com.kodekloud</groupId>
+  <artifactId>greeting-app</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>KodeKloud Greeting App</name>
+  <description>Simple Maven demo project for the DevOps Pre-Requisite course</description>
+
+  <!-- ============================================================ -->
+  <!-- Properties                                                    -->
+  <!-- ============================================================ -->
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!-- ============================================================ -->
+  <!-- Dependencies — Maven downloads these automatically            -->
+  <!-- ============================================================ -->
+  <dependencies>
+
+    <!-- Apache Commons Lang3 — a small utility library used inside App.java -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.14.0</version>
+    </dependency>
+
+    <!-- JUnit — only needed for running tests, not for the final app -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <!-- ============================================================ -->
+  <!-- Build & Plugins                                               -->
+  <!-- ============================================================ -->
+  <build>
+    <finalName>greeting-app-1.0.0</finalName>
+    <plugins>
+
+      <!-- Compiles the Java source code -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+
+      <!-- Bundles the app + all its dependencies into ONE runnable "fat JAR" -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.5.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>com.kodekloud.app.App</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>
